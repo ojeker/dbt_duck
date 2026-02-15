@@ -1,0 +1,23 @@
+
+version: 2
+
+models:
+  - name: principal
+    description: "union of users.json and groups.json"
+    columns:
+      - name: id
+        description: "The identification of the principal"
+        data_tests:
+          - unique
+          - not_null
+  - name: user_role
+    description: "All tuples user - role. Derived from the group-tree and all roles associated with a principal (= user or group)"
+    columns:
+      - name: user_id
+        description: "The user id"
+        data_tests:
+          - not_null
+      - name: role_id
+        description: "The role id"
+        data_tests:
+          - not_null
