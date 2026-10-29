@@ -1,6 +1,7 @@
 [
     {
         "id": "afu",
+        "ldap_link":"Amt für Umwelt",
         "roles_": [
             "afu_kbs_read"
         ]
